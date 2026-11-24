@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1120" role="img" aria-labelledby="title desc">
+<title id="title">从录音理解具身智能业务架构</title>
+<desc id="desc">思维导图呈现AI OS与Agent平台、算法与本体、商业工业家庭场景、家庭取件工具链，以及录音时的项目进度和工程难题。</desc>
+<defs><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#192b32}.title{font-size:26px;font-weight:700}.branch{font-size:20px;font-weight:700}.item{font-size:16px;font-weight:650}.detail{font-size:13px;fill:#5f7075}.micro{font-size:12px;fill:#5f7075}.wire{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+</style></defs>
+<rect width="1500" height="1120" fill="#f5f6f2"/>
+<text x="60" y="58" font-size="14" font-weight="700" fill="#245d59">录音业务架构 · 思维导图</text>
+<text x="60" y="84" class="micro">以可辨认的录音内容为线索；产品名与录制时间仍待确认</text>
+
+<!-- Main branches -->
+<path class="wire" stroke="#8ebcb5" d="M590 451 C510 390 480 327 430 285"/>
+<path class="wire" stroke="#a8bfd0" d="M910 451 C990 390 1020 327 1070 285"/>
+<path class="wire" stroke="#e4a394" d="M590 555 C500 645 470 704 430 745"/>
+<path class="wire" stroke="#a7c0ad" d="M910 555 C1000 645 1030 704 1070 745"/>
+
+<!-- Center -->
+<rect x="570" y="415" width="360" height="176" rx="8" fill="#e5efec" stroke="#8ebcb5" stroke-width="2"/>
+<text x="750" y="465" text-anchor="middle" class="title">具身智能业务</text>
+<text x="750" y="500" text-anchor="middle" font-size="15">Agent 理解任务，工具调用能力，</text>
+<text x="750" y="525" text-anchor="middle" font-size="15">机器人在物理世界执行并反馈</text>
+<text x="750" y="560" text-anchor="middle" class="micro">目标：把单项动作组合成可靠任务</text>
+
+<!-- Upper left: architecture -->
+<rect x="80" y="125" width="440" height="74" rx="7" fill="#dcece8" stroke="#8ebcb5" stroke-width="2"/>
+<text x="105" y="171" class="branch">业务架构：平台 + 算法 + 本体</text>
+<path d="M300 199 V232 H190 M300 232 H410 M300 322 V347 H190 M300 347 H410" fill="none" stroke="#8ebcb5" stroke-width="2.5"/>
+<rect x="80" y="232" width="220" height="70" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="98" y="260" class="item">AI OS / Agent 平台</text><text x="98" y="282" class="detail">共用框架、接口、任务调度</text>
+<rect x="300" y="232" width="220" height="70" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="318" y="260" class="item">大脑算法</text><text x="318" y="282" class="detail">感知环境、理解指令、规划步骤</text>
+<rect x="80" y="347" width="220" height="70" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="98" y="375" class="item">上肢操作 / 下肢运控</text><text x="98" y="397" class="detail">手部操作与站立行走分层控制</text>
+<rect x="300" y="347" width="220" height="70" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="318" y="375" class="item">本体、数据与交付</text><text x="318" y="397" class="detail">硬件、遥操作采集、现场工具适配</text>
+
+<!-- Upper right: scenarios -->
+<rect x="980" y="125" width="440" height="74" rx="7" fill="#e2ebf2" stroke="#a8bfd0" stroke-width="2"/>
+<text x="1005" y="171" class="branch">业务场景：任务形态不同</text>
+<path d="M1200 199 V234 H1080 M1200 315 V340 H1080 M1200 396 V421 H1080" fill="none" stroke="#a8bfd0" stroke-width="2.5"/>
+<rect x="980" y="234" width="440" height="68" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1000" y="261" class="item">商业空间</text><text x="1000" y="284" class="detail">4S 店导览、展厅讲解；移动为主，录音称相对成熟</text>
+<rect x="980" y="315" width="440" height="68" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1000" y="342" class="item">工业现场</text><text x="1000" y="365" class="detail">工厂/半导体场景；考验重复操作、精度与节拍</text>
+<rect x="980" y="396" width="440" height="68" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1000" y="423" class="item">家庭 / 服务</text><text x="1000" y="446" class="detail">双足双手机器人乘电梯取件再返回；跨空间长任务</text>
+
+<!-- Lower left: workflow -->
+<rect x="80" y="705" width="440" height="74" rx="7" fill="#f5e4df" stroke="#e4a394" stroke-width="2"/>
+<text x="105" y="751" class="branch">家庭取件：工具链示意</text>
+<path d="M300 779 V806 H190 M300 806 H410 M300 896 V919 H190 M300 919 H410" fill="none" stroke="#e4a394" stroke-width="2.5"/>
+<rect x="80" y="806" width="220" height="70" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="98" y="834" class="item">1. 导航到电梯</text><text x="98" y="856" class="detail">从起点走到电梯口</text>
+<rect x="300" y="806" width="220" height="70" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="318" y="834" class="item">2. 调整站位并按键</text><text x="318" y="856" class="detail">判断是否要按、控制手臂、确认结果</text>
+<rect x="80" y="919" width="220" height="70" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="98" y="947" class="item">3. 观察门与楼层</text><text x="98" y="969" class="detail">等目标楼层、判断何时进出</text>
+<rect x="300" y="919" width="220" height="70" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="318" y="947" class="item">4. 换楼层地图、取件</text><text x="318" y="969" class="detail">导航到货架；抓取与失败恢复待攻克</text>
+
+<!-- Lower right: maturity and constraints -->
+<rect x="980" y="705" width="440" height="74" rx="7" fill="#e5eee6" stroke="#a7c0ad" stroke-width="2"/>
+<text x="1005" y="751" class="branch">录音时的进度与难点</text>
+<path d="M1200 779 V806 H1080 M1200 896 V919 H1080" fill="none" stroke="#a7c0ad" stroke-width="2.5"/>
+<rect x="980" y="806" width="440" height="70" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1000" y="834" class="item">已有：多个单项工具分别打通</text><text x="1000" y="856" class="detail">导航、按键、观察、地图切换等，仍需速度与现场适配</text>
+<rect x="980" y="896" width="440" height="70" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1000" y="924" class="item">未完成：抓取与端到端长任务</text><text x="1000" y="946" class="detail">响应延迟、断网、场景变化、失败重规划仍待处理</text>
+<text x="980" y="1000" class="micro">录音目标：11 月 30 日完成流程、次年长沙园区推广；录制年份未知，不代表当前计划。</text>
+
+<text x="60" y="1070" class="micro">提示：录音中的公司/模型/硬件名称有同音误识别；此图按可辨认的业务关系整理，未确认专名不作定论。</text>
+</svg>

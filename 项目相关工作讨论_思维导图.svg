@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1320" role="img" aria-labelledby="title desc">
+<title id="title">项目相关工作讨论思维导图</title>
+<desc id="desc">AIOS 3.0 迁移、导航和电梯任务、Agent技能架构、Trace性能日志、刘星宇行动安排以及待确认风险。</desc>
+<defs><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#203238}.head{font-size:24px;font-weight:700}.branch{font-size:19px;font-weight:700}.item{font-size:15px;font-weight:700}.detail{font-size:12px;fill:#53666c}.tiny{font-size:11px;fill:#607278}.wire{fill:none;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+</style></defs>
+<rect width="1800" height="1320" fill="#f3f6f4"/>
+<text x="54" y="42" font-size="14" font-weight="700" fill="#28786e">项目相关工作讨论 · 思维导图</text>
+<text x="54" y="66" class="tiny">会议信息按明确事项、讨论方案与待确认项区分；日期、模型规模及专名以原音/项目计划核实</text>
+<!-- connectors -->
+<path class="wire" stroke="#8bb9ae" d="M725 490 C650 415 600 285 525 230"/>
+<path class="wire" stroke="#a9bfd0" d="M1075 490 C1150 415 1200 285 1275 230"/>
+<path class="wire" stroke="#d6a493" d="M725 610 C650 690 600 820 525 875"/>
+<path class="wire" stroke="#a9bea8" d="M1075 610 C1150 690 1200 820 1275 875"/>
+<path class="wire" stroke="#c2b381" d="M825 680 C790 760 770 855 755 930"/>
+<path class="wire" stroke="#96b5c7" d="M975 680 C1010 760 1030 855 1045 930"/>
+<!-- center -->
+<rect x="650" y="440" width="500" height="240" rx="8" fill="#e3efeb" stroke="#8bb9ae" stroke-width="2.5"/>
+<text x="900" y="488" text-anchor="middle" class="head">AIOS 3.0 业务迁移与机器人联调</text>
+<text x="900" y="528" text-anchor="middle" font-size="15">恢复工具/skill → 导航上机 → 电梯按钮闭环</text>
+<text x="900" y="558" text-anchor="middle" font-size="15">记录 Agent Trace → 分析耗时与失败 → 逐步优化</text>
+<line x1="710" y1="584" x2="1090" y2="584" stroke="#bdd4cd"/>
+<text x="900" y="615" text-anchor="middle" class="detail">刘星宇重点：参与联调，推进 Trace/日志分析与场景评测</text>
+<text x="900" y="644" text-anchor="middle" class="tiny">讨论方向不等同于已确认的里程碑或交付日期</text>
+<!-- top-left -->
+<rect x="54" y="102" width="500" height="64" rx="7" fill="#e5f0ed" stroke="#8bb9ae" stroke-width="2"/>
+<text x="78" y="142" class="branch">一、迁移与导航联调</text>
+<path d="M304 166 V190 H170 M304 190 H438 M304 282 V306 H170 M304 306 H438" fill="none" stroke="#8bb9ae" stroke-width="2"/>
+<rect x="54" y="190" width="232" height="70" rx="6" fill="#fff" stroke="#c9ddd8"/><text x="70" y="217" class="item">AIOS 3.0 可上机验证</text><text x="70" y="239" class="detail">旧 tools / skills 需迁移或重建</text>
+<rect x="322" y="190" width="232" height="70" rx="6" fill="#fff" stroke="#c9ddd8"/><text x="338" y="217" class="item">资料仍可用于恢复</text><text x="338" y="239" class="detail">按旧文档核对缺失与行为</text>
+<rect x="54" y="306" width="232" height="70" rx="6" fill="#fff" stroke="#c9ddd8"/><text x="70" y="333" class="item">比较两种导航方案</text><text x="70" y="355" class="detail">自研/外部版本看实机效果</text>
+<rect x="322" y="306" width="232" height="70" rx="6" fill="#fff" stroke="#c9ddd8"/><text x="338" y="333" class="item">优先点到点与切地图</text><text x="338" y="355" class="detail">低矮障碍和卡停仍需验证</text>
+<rect x="75" y="392" width="458" height="48" rx="6" fill="#fbf1ed" stroke="#e3c6bb"/><text x="94" y="422" class="item">调试窗口与设备时间需协调；问题回传供应方</text>
+<!-- top-right -->
+<rect x="1246" y="102" width="500" height="64" rx="7" fill="#eaf1f6" stroke="#a9bfd0" stroke-width="2"/>
+<text x="1270" y="142" class="branch">二、任务流程与范围</text>
+<path d="M1496 166 V190 H1362 M1496 190 H1630 M1496 282 V306 H1362 M1496 306 H1630" fill="none" stroke="#a9bfd0" stroke-width="2"/>
+<rect x="1246" y="190" width="232" height="70" rx="6" fill="#fff" stroke="#ccd9e3"/><text x="1262" y="217" class="item">导航先行接通</text><text x="1262" y="239" class="detail">点对点、站点与地图切换</text>
+<rect x="1514" y="190" width="232" height="70" rx="6" fill="#fff" stroke="#ccd9e3"/><text x="1530" y="217" class="item">上下电梯闭环</text><text x="1530" y="239" class="detail">导航、按键、切图、离梯</text>
+<rect x="1246" y="306" width="232" height="70" rx="6" fill="#fff" stroke="#ccd9e3"/><text x="1262" y="333" class="item">真手/灵巧手需重调</text><text x="1262" y="355" class="detail">姿态、关节对齐、按钮命中</text>
+<rect x="1514" y="306" width="232" height="70" rx="6" fill="#fff" stroke="#ccd9e3"/><text x="1530" y="333" class="item">抓取与取送物</text><text x="1530" y="355" class="detail">被提及；范围日期待确认</text>
+<rect x="1267" y="392" width="458" height="48" rx="6" fill="#f5f1e4" stroke="#e6dfc6"/><text x="1285" y="422" class="item">APP联动/语音打断/感知：讨论过，优先级尚未确定</text>
+<!-- left bottom branch -->
+<rect x="54" y="770" width="500" height="64" rx="7" fill="#f7ece8" stroke="#d6a493" stroke-width="2"/>
+<text x="78" y="810" class="branch">三、Agent 与 Skill 架构</text>
+<path d="M304 834 V858 H170 M304 858 H438 M304 950 V974 H170 M304 974 H438" fill="none" stroke="#d6a493" stroke-width="2"/>
+<rect x="54" y="858" width="232" height="70" rx="6" fill="#fff" stroke="#ead4cc"/><text x="70" y="885" class="item">工具 = 单个动作</text><text x="70" y="907" class="detail">如导航、切图、按钮执行</text>
+<rect x="322" y="858" width="232" height="70" rx="6" fill="#fff" stroke="#ead4cc"/><text x="338" y="885" class="item">Skill = 说明与流程</text><text x="338" y="907" class="detail">总流程调用多个子 skill</text>
+<rect x="54" y="974" width="232" height="70" rx="6" fill="#fff" stroke="#ead4cc"/><text x="70" y="1001" class="item">先按平台建议实现</text><text x="70" y="1023" class="detail">性能不足再看插件/原生函数</text>
+<rect x="322" y="974" width="232" height="70" rx="6" fill="#fff" stroke="#ead4cc"/><text x="338" y="1001" class="item">按需加载上下文</text><text x="338" y="1023" class="detail">避免全量工具说明常驻</text>
+<!-- right bottom branch -->
+<rect x="1246" y="770" width="500" height="64" rx="7" fill="#e9f0e8" stroke="#a9bea8" stroke-width="2"/>
+<text x="1270" y="810" class="branch">四、问题与交付取舍</text>
+<path d="M1496 834 V858 H1362 M1496 858 H1630 M1496 950 V974 H1362 M1496 974 H1630" fill="none" stroke="#a9bea8" stroke-width="2"/>
+<rect x="1246" y="858" width="232" height="70" rx="6" fill="#fff" stroke="#d1ded3"/><text x="1262" y="885" class="item">Demo ≠ 稳定交付</text><text x="1262" y="907" class="detail">重复成功需更多异常处理</text>
+<rect x="1514" y="858" width="232" height="70" rx="6" fill="#fff" stroke="#d1ded3"/><text x="1530" y="885" class="item">感知打断尚未联调</text><text x="1530" y="907" class="detail">执行中止与恢复要明确</text>
+<rect x="1246" y="974" width="232" height="70" rx="6" fill="#fff" stroke="#d1ded3"/><text x="1262" y="1001" class="item">APP 外网到内网</text><text x="1262" y="1023" class="detail">数据链路方案仍开放</text>
+<rect x="1514" y="974" width="232" height="70" rx="6" fill="#fff" stroke="#d1ded3"/><text x="1530" y="1001" class="item">日期和版本识别不稳</text><text x="1530" y="1023" class="detail">10/30、11/5、11/15等须核实</text>
+<!-- bottom center branches -->
+<rect x="610" y="930" width="290" height="64" rx="7" fill="#f5f1e4" stroke="#c2b381" stroke-width="2"/><text x="634" y="970" class="branch">五、Trace 与性能</text>
+<rect x="590" y="1010" width="330" height="184" rx="6" fill="#fff" stroke="#e2dbc2"/>
+<text x="612" y="1040" class="item">记录每一段，而非只看总耗时</text>
+<text x="612" y="1070" class="detail">用户输入 / 计划状态 / 模型响应</text>
+<text x="612" y="1095" class="detail">首 token / 完整响应 / token 数</text>
+<text x="612" y="1120" class="detail">工具名 / 参数 / 返回 / 错误 / 耗时</text>
+<text x="612" y="1152" class="tiny">短期可用 hook 与独立日志补齐</text>
+<text x="612" y="1173" class="tiny">分清模型慢、工具慢还是调用错误</text>
+
+<rect x="900" y="930" width="290" height="64" rx="7" fill="#eaf1f6" stroke="#96b5c7" stroke-width="2"/><text x="924" y="970" class="branch">六、刘星宇重点</text>
+<rect x="880" y="1010" width="330" height="184" rx="6" fill="#fff" stroke="#cedce5"/>
+<text x="902" y="1040" class="item">参与基础流程与上机联调</text>
+<text x="902" y="1070" class="detail">梳理工具/skill 及迁移缺口</text>
+<text x="902" y="1095" class="detail">推进 Agent Trace 与性能日志</text>
+<text x="902" y="1120" class="detail">用真实轨迹做场景评测与归因</text>
+<text x="902" y="1152" class="tiny">记录参数正确性、工具耗时、模型时延</text>
+<text x="902" y="1173" class="tiny">再评估小模型训练；规格并未敲定</text>
+
+<text x="54" y="1270" class="tiny">配套文件：项目相关工作讨论_谈话整理.html · 完整识别稿：项目相关工作讨论_豆包转录稿.txt</text>
+</svg>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>从一段业务介绍，读懂具身智能</title>
+<style>
+:root{--ink:#192b32;--muted:#5f7075;--paper:#f5f6f2;--white:#fff;--line:#d8e0dc;--teal:#126b67;--coral:#cb5b42;--yellow:#e8bc4e;--blue:#426b8c;--green:#5b806a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}.layout{display:grid;grid-template-columns:230px minmax(0,900px);gap:56px;max-width:1260px;padding:48px 36px;margin:auto}aside{position:sticky;top:28px;height:max-content;border-left:2px solid var(--line);padding:0 0 0 18px}aside strong{display:block;font-size:13px;color:var(--muted);margin-bottom:12px}nav a{display:block;color:var(--muted);text-decoration:none;font-size:14px;padding:5px 0}nav a:hover{color:var(--teal)}main{min-width:0}header{padding:28px 0 34px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--teal);font-size:13px;font-weight:700}h1{font-size:42px;line-height:1.2;margin:14px 0 18px;max-width:760px}h2{font-size:27px;line-height:1.3;margin:0 0 16px}h3{font-size:18px;line-height:1.4;margin:0 0 7px}p{margin:0 0 13px}.lead{font-size:18px;max-width:780px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.tag{font-size:12px;border:1px solid var(--line);padding:3px 9px;color:var(--muted);border-radius:3px}.notice{margin:22px 0;padding:14px 17px;background:#fff5df;border-left:3px solid var(--yellow);font-size:14px}.section{padding:42px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}.kicker{font-size:12px;letter-spacing:0;color:var(--coral);font-weight:700;margin-bottom:8px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:22px 0}.summary div{padding:16px 16px 14px 0}.summary div+div{padding-left:18px;border-left:1px solid var(--line)}.summary b{display:block;font-size:14px;margin-bottom:5px}.summary p{font-size:14px;color:var(--muted);margin:0}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:24px 0}.flow article{padding:16px 14px;border-top:3px solid var(--teal);background:var(--white);min-height:156px}.flow article:nth-child(2){border-color:var(--blue)}.flow article:nth-child(3){border-color:var(--coral)}.flow article:nth-child(4){border-color:var(--green)}.flow article+article{margin-left:1px}.flow small{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.flow p{font-size:13px;color:var(--muted);margin:0}.callout{padding:16px 18px;background:#e7efeb;border-left:3px solid var(--teal);margin:20px 0}.callout p:last-child{margin-bottom:0}.compare{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}.compare th,.compare td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid var(--line)}.compare th{color:var(--muted);font-size:12px;font-weight:600}.compare td:first-child{font-weight:700;white-space:nowrap}.terms{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.terms article{padding:13px 0;border-top:1px solid var(--line)}.terms p{font-size:14px;color:var(--muted);margin:0}.status{display:inline-block;background:#edf3ee;color:#3e6c4d;padding:2px 7px;font-size:11px;border-radius:2px;margin-left:6px}.timeline{border-left:2px solid var(--line);padding-left:20px;margin:20px 0}.timeline article{position:relative;padding:0 0 18px}.timeline article:before{content:"";position:absolute;left:-26px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--coral)}.timeline time{font-size:12px;color:var(--coral);font-weight:700}.timeline p{font-size:14px;color:var(--muted);margin:4px 0 0}.source{font-size:13px;color:var(--muted);padding:12px 0;border-top:1px solid var(--line)}a{color:var(--teal)}.transcript-box{background:var(--white);padding:20px;max-height:360px;overflow:auto;border:1px solid var(--line);font:13px/1.85 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;color:#43535a}.small{font-size:13px;color:var(--muted)}.button{display:inline-block;padding:9px 13px;border:1px solid var(--teal);color:var(--teal);text-decoration:none;font-size:14px;margin:5px 0 16px}footer{padding:24px 0 12px;color:var(--muted);font-size:13px}@media(max-width:850px){.layout{display:block;padding:22px 20px}aside{position:static;border-left:0;border-bottom:1px solid var(--line);padding:0 0 14px;margin-bottom:18px}nav{display:flex;gap:12px;overflow:auto;white-space:nowrap}nav a{padding:2px 0}h1{font-size:34px}.flow{grid-template-columns:1fr 1fr}.flow article{min-height:130px}.terms{grid-template-columns:1fr}.summary{grid-template-columns:1fr}.summary div+div{border:0;border-top:1px solid var(--line);padding-left:0}}@media(max-width:480px){.layout{padding:16px}.flow{grid-template-columns:1fr}h1{font-size:30px}.section{padding:32px 0}.compare td:first-child{white-space:normal}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside><strong>本页目录</strong><nav><a href="#takeaways">先看结论</a><a href="#mindmap">思维导图</a><a href="#map">业务地图</a><a href="#basics">零基础词典</a><a href="#questions">你的 10 个问题</a><a href="#recording">业务架构</a><a href="#snapshot">录音时的进度</a><a href="#progress">行业进展</a><a href="#limits">识别稿</a></nav></aside>
+<main>
+<header>
+<div class="eyebrow">录音导读 · 给第一次接触机器人的你</div>
+<h1>从一段业务介绍，读懂具身智能</h1>
+<p class="lead">这段录音像一次团队业务与技术架构介绍：讲到机器人怎么感知环境、怎么规划动作、怎么驱动身体，以及怎样把这些能力放进真实场景交付。把它当成一张“机器人公司如何把技术做成工作”的地图来听。</p>
+<div class="meta"><span class="tag">音频约 38 分钟</span><span class="tag">豆包自动识别稿 415 段</span><span class="tag">资料整理日期：2026-10-19</span><span class="tag">需复核专有名词</span></div>
+<div class="notice"><b>转写说明：</b>已改用本机已有项目中的豆包 AUC 转写链路，分 8 段识别并保留说话人和时间戳。新稿比之前本地 Whisper 版本清楚很多，但专有名词、英文技术词和少量数字仍有错听；全文仍是自动识别稿，不是人工逐字校订稿。公司名称以附件文件名为准，录音中的同音转写并不稳定。</div>
+</header>
+<section id="takeaways" class="section">
+<div class="kicker">01 / 先看结论</div><h2>把录音压缩成三句话</h2>
+<div class="summary">
+<div><b>它在讲什么</b><p>录音把业务拆成 AI OS / Agent 平台、算法、本体硬件、数据采集和场景交付，讲的是它们如何配合。</p></div>
+<div><b>怎么落到业务</b><p>商业场景偏导览；工业场景主要考验操作；家庭场景拿取快递则串起导航、电梯交互、等待判断和抓取。</p></div>
+<div><b>项目当时进度</b><p>说话人称多数单项工具已连通，但取物能力与长流程端到端串联仍未完成，响应时间和现场稳定性是阻碍。</p></div>
+</div>
+<p>录音还对比了物理世界与数字世界：任务都可以拆成工具和步骤，但机器人还受动作速度、空间精度、断网、碰撞和失败恢复限制。请注意：录音日期未知，因此其中的“今年 11 月 30 日目标”和“明年园区推广”只是当时的计划，不能直接当作现在的进度。</p>
+</section>
+<section id="mindmap" class="section">
+<div class="kicker">思维导图 / 一图看懂</div><h2>具身智能业务全景</h2>
+<p>导图根据新转写稿重画：中心是机器人任务，外圈展开公司技术分工、代表场景、家庭取件的任务链和录音里暴露的工程难题。专有名词仍需复听确认。</p>
+<a class="button" href="具身智能业务思维导图.svg" target="_blank" rel="noopener">单独打开思维导图</a>
+<img src="具身智能业务思维导图.svg" alt="具身智能业务思维导图，展示AI OS与算法平台、场景、任务工具链和工程难点" style="display:block;width:100%;height:auto;border:1px solid #d8e0dc;background:#f5f6f2">
+</section>
+<section id="map" class="section">
+<div class="kicker">02 / 业务地图</div><h2>一台机器人怎样从“看见”走到“做到”</h2>
+<p>录音采用“Agent 调工具”的思路描述一条长任务：模型做高层理解和规划，具体动作由已经封装好的导航、定位、按键、监控等工具执行，工具回报结果后再决定下一步。</p>
+<div class="flow">
+<article><small>01 · 机器人本体</small><h3>身体与传感器</h3><p>关节、电机、手/夹爪、相机、深度传感器、计算单元和电池。硬件决定能碰什么、搬多重、运行多久。</p></article>
+<article><small>02 · 感知与定位</small><h3>看懂周围</h3><p>识别人、物体、按钮、门和空间位置；判断机器人自身在哪里，环境是否发生变化。</p></article>
+<article><small>03 · 规划与控制</small><h3>决定并执行</h3><p>把“拿起杯子”拆成靠近、对准、伸手、闭合、抬起等动作；控制器把动作变成各关节的速度/力矩命令。</p></article>
+<article><small>04 · 任务与交付</small><h3>在现场做好</h3><p>接入电梯、门禁或产线；监控失败、远程协助、更新软件，并验证安全、成功率和维护成本。</p></article>
+</div>
+<div class="callout"><b>录音例子：从楼上取一个快递。</b><p>先导航到电梯；走到按钮前调整站位；判断是否需要按键并执行；通过相机检查按钮、楼层和电梯门状态；到目标楼层后切换楼层地图；再导航到货架并抓取物品，最后带回。录音明确说，抓取工具和完整长流程当时还未打通。</p></div>
+<h3>公司业务对应的工作分层</h3>
+<table class="compare"><thead><tr><th>工作层</th><th>做什么</th><th>录音中的对应线索</th></tr></thead><tbody>
+<tr><td>AI OS / Agent 平台</td><td>提供通用 Agent 框架和接口；业务团队补充场景工具、技能和异常流程。</td><td>说话人称采用平台侧 AI OS，场景业务侧负责定义和开发具体工具。</td></tr>
+<tr><td>算法与控制</td><td>大脑模型做感知/任务规划；上肢操作与下肢运动控制分层实现。</td><td>录音用“大脑/小脑”作比喻，谈到导航、VLA/世界模型、运控等。</td></tr>
+<tr><td>硬件/本体</td><td>机器人身体、手部自由度、相机、计算设备等；有自研也有合作方本体。</td><td>提及本体与手部研发/合作。具体品牌有错听风险，不在此确认。</td></tr>
+<tr><td>数据与验证</td><td>遥操作、数据采集、现场调试和仿真，用来训练与验证动作能力。</td><td>明确提到采数平台、Pico/遥操作等；部分设备名需核对。</td></tr>
+<tr><td>场景交付</td><td>把可复用的平台能力改造成导览、产线操作或家庭任务。</td><td>交付团队负责具体工具、场景适配和长任务串联。</td></tr>
+</tbody></table>
+</section>
+<section id="basics" class="section">
+<div class="kicker">03 / 零基础词典</div><h2>先懂这些词，就能跟上录音</h2>
+<div class="terms">
+<article><h3>具身智能</h3><p>有身体、能感知和行动的智能系统。它不只在屏幕里回答问题，还要在物理世界里做事，并承受动作带来的后果。</p></article>
+<article><h3>感知</h3><p>把相机、深度传感器、力觉等信号变成“这里有桌子、按钮在右边、手里拿着物体”的环境信息。</p></article>
+<article><h3>导航</h3><p>回答“我在哪儿、要去哪儿、怎样安全到达”。导航到电梯口，不等于会按电梯或进入电梯。</p></article>
+<article><h3>操作 / Manipulation</h3><p>用手或夹爪与物体交互，例如抓、放、开门、按按钮。它比沿固定路线行走更依赖精确感知和接触反馈。</p></article>
+<article><h3>运控</h3><p>运动控制把上层动作转成关节的实时指令，并在重心、摩擦、负载变化时维持稳定。</p></article>
+<article><h3>世界模型</h3><p>系统对环境状态以及“做某个动作会发生什么”的内部预测。它是研究方向之一，不等于已经拥有通用现实世界模拟器。</p></article>
+<article><h3>模仿学习 / 遥操作</h3><p>人通过手柄、动捕或示教设备操纵机器人，系统记录状态和动作，作为训练或调试数据。数据质量与场景覆盖很关键。</p></article>
+<article><h3>VLA 模型</h3><p>Vision-Language-Action：把视觉、语言指令和动作联系起来的一类模型。它可以帮助理解“把红杯放进箱子”，但仍需可靠的低层控制和安全机制。</p></article>
+<article><h3>仿真与数字孪生</h3><p>在虚拟环境中测试动作或流程，成本通常低于反复上真机；但仿真与真实世界存在差异，实机验证仍不可省。</p></article>
+<article><h3>长尾问题</h3><p>少见却真实的变化：物品换位置、光线变暗、地面打滑、按钮被挡住。演示成功不代表这些情况都能处理。</p></article>
+</div>
+</section>
+<section id="questions" class="section">
+<div class="kicker">补充问答 / 对照录音</div><h2>你问的 10 个问题</h2>
+<p>下面把录音说了什么、通用技术概念是什么分开写。录音日期和若干专有名词无法确认，因此“项目当前状态”不能只靠这段录音下结论。</p>
+<div class="terms">
+<article><h3>1. 现在用的是什么模型？机器人适合用什么大模型？</h3><p><b>录音能确认：</b>说话人称某个“动态大模型”负责感知和任务规划；项目采用平台侧 Agent，提到云端/公司服务器部署，也讨论过本体侧小模型作为断网兜底。模型名称在自动识别稿里不可靠，无法确认具体厂商、型号、参数或现在是否仍在使用。<br><b>和其他 AI 的区别：</b>聊天大模型主要生成文字；视觉模型常输出类别、位置或描述；推荐模型排序候选内容。机器人系统最终还要输出可执行动作，并通过传感器看动作结果、及时纠错，所以更看重实时性、空间定位、可靠性和安全。<br><b>怎么选：</b>机器人通常不是靠一个大模型包办全部工作。高层可用多模态语言模型理解指令、识别场景并拆任务；VLA 可直接从视觉和语言生成动作；导航、机械臂轨迹和关节控制则常由专用算法负责。选择看延迟、稳定性、空间定位与动作能力、设备算力、离线运行、安全约束和成本。通用聊天模型擅长文字推理，不代表它能直接安全地控制电机。</p></article>
+<article><h3>2. 大脑和小脑分别是什么？</h3><p>这是工程分层的比喻，不是严格的生物学对应。<b>大脑</b>偏高层：听懂“去取快递”，看场景、安排步骤、根据结果决定下一步。<b>小脑</b>偏具体技能与身体控制：走路保持平衡、手臂伸到目标处、抓稳或按下按钮。现实系统还会有感知、规划器、运动控制器、安全监控等多个模块，不一定正好是两个模型。录音也按上肢操作和下肢运控分别介绍。</p></article>
+<article><h3>3. 自由度是什么？</h3><p>自由度（DoF）可以先理解为一个机构能独立改变的运动方向/关节数量。比如门铰链主要绕一个轴转，是 1 个自由度；机械臂每个可独立转动的关节通常贡献一个自由度。自由度更多，手臂姿态和绕障空间往往更灵活，但控制、标定和碰撞管理也更复杂。录音说某只手原来是 5 自由度，并据此解释按电梯按钮时手的可达范围受限；这不是整台机器人的自由度总数。</p></article>
+<article><h3>4. Pico 是什么？</h3><p>PICO 通常是 VR 头显品牌。录音在“遥操作采数平台”语境中提到 Pico，所以较可能指用头显/控制器进行示教或遥操作的设备；但仅凭自动转写不能确认具体型号、配置或实际操作方式。它本身不是机器人算法，也不等于机器人本体。要核实项目设备，应回听约 03:33–03:42（录音稿约 213–222 秒）或向项目人员确认。</p></article>
+<article><h3>5. AI OS / Agent 平台是什么？Agent 在机器人里做什么？</h3><p>把 Agent 想成“接到目标后安排并调用工具的调度员”。AI OS（录音中的拼写可能是 AI OS/iOS，不能据 ASR 定论）则是承载 Agent 的平台，提供模型接入、工具接口、会话/任务流程等基础能力，具体产品边界要看公司实现。机器人 Agent 可把“去拿快递”拆成导航、观察电梯、按键、等待、换地图、抓取等步骤，调用相应工具、读取结果、判断是否成功，并在异常时重试、改计划或求助。Agent 负责组织任务，不应替代底层实时控制和安全保护。</p></article>
+<article><h3>6. 遥操是什么？</h3><p>遥操作就是人远程操纵机器人，或通过头显、手柄、动捕等设备示教动作。系统可同步记录机器人看到什么、身体状态怎样、人下了什么动作，形成训练数据，也可用于调试和人工接管。录音把遥操作与采数平台联系起来。遥操不是机器人自主完成任务；数据还要筛选、标注，并验证能否让模型学会在不同现场复现。</p></article>
+<article><h3>7. 看见物体后变成三维坐标并规划路径，是什么原理？规则还是模型？</h3><p>录音描述的是一个混合流程：相机先检测图像中的目标点（像素位置）；深度传感器或深度估计模型给出距离；结合相机内参把像素反投影为相机坐标系中的三维点，再用标定结果变换到机器人坐标系。若要手臂碰到该点，还要做逆运动学，求一组关节角；再由路径规划器找避障路线，控制器执行并用传感器反馈修正。这里可能有模型（目标识别、深度估计），也有几何计算、优化和规划算法，不是“一个大模型直接看图就知道怎么走”。录音约 13:05–17:16（稿件约 785–1035 秒）讨论了按钮点位、深度、三维坐标和逆解。</p></article>
+<article><h3>8. 当前项目有没有用到世界模型？</h3><p><b>这段录音不能证明项目已经用了世界模型。</b>说话人在介绍上肢技能时把“VLA、世界模型”等作为相关方向/技术词提到，但没有明确说家庭取件项目已部署哪一种世界模型。录音具体讲到的按钮和导航方法，至少包括视觉/深度信息、相机参数、坐标变换、逆运动学以及工具流程；这些本身不等于世界模型。若要确认，需问项目是否维护可预测环境变化的状态模型、模型具体输入输出、在哪个环节上线，以及是否有评测结果。</p></article>
+<article><h3>9. WA、VLA、VLM 是什么？</h3><p><b>VLM</b>（Vision-Language Model）把图像/视频与语言关联起来，可回答“图里有什么”“按钮在哪”等问题；它不一定会输出可执行动作。<b>VLA</b>（Vision-Language-Action）把视觉、语言指令和动作连接起来，目标是从“看见 + 听懂”走向动作输出；通常仍要搭配低层控制、安全检查和反馈。<b>WA</b>不是具身智能里含义唯一、统一的常用缩写。录音自动稿对应位置识别成“VLA、WR、世界模型”，可能把英文缩写听错了；不宜擅自断定 WA 的全称。最好回听约 01:58–02:13（稿件约 118–132 秒）或核对说话人课件。若原词实际是 WM，一般指 World Model（世界模型）。</p></article>
+<article><h3>10. 长尾问题是什么？</h3><p>大多数常见情况是“主干”，少见但真实的变化就是“长尾”：按钮被遮住、物品换了包装或位置、电梯临时停运、光线变化、网络中断、抓取滑落。每种情况单看都少见，组合起来却很多。机器人不能只在固定演示里成功，还要识别自己不确定或失败、停稳并重试/改计划/叫人；这也是录音反复提到长任务兜底和现场稳定性的原因。</p></article>
+</div>
+<div class="callout"><b>把整条技术链记成一句话：</b><p>大模型/Agent 决定“做什么、调用哪个技能”；视觉与几何模块定位目标；规划和控制把目标变成可执行动作；传感器检查结果，失败时再调整或求助。项目是否真的采用某个具体模型，要看部署记录和现场验证，不能只根据技术名词推断。</p></div>
+</section>
+<section id="recording" class="section">
+<div class="kicker">04 / 录音梳理</div><h2>公司怎么分工，业务怎么落地</h2>
+<p>下面是录音能较清楚还原的业务地图。组织名、模型名和合作方专名仍有误听可能，按职能理解比按专名记忆更可靠。</p>
+<table class="compare"><thead><tr><th>板块</th><th>职责</th><th>小白可以这样理解</th></tr></thead><tbody>
+<tr><td>AI OS / Agent 平台</td><td>提供共用系统骨架、接口和 Agent 执行能力。</td><td>像机器人的“工作台和调度员”；业务团队在上面定义场景技能和工具。</td></tr>
+<tr><td>大脑算法</td><td>从视觉和指令中识别任务、理解环境并规划下一步。</td><td>负责判断“要做什么、先做哪一步”。</td></tr>
+<tr><td>小脑与运动控制</td><td>上肢负责操作， 下肢负责站立和移动，并及时控制关节。</td><td>负责“怎么把动作做出来”；精确按键和抓物不能只靠语言模型。</td></tr>
+<tr><td>本体硬件</td><td>机器人身体、手部、相机、计算单元及接口；录音提到自研与合作本体并存。</td><td>身体的自由度、手的结构、传感器位置决定动作能力上限。</td></tr>
+<tr><td>数据与交付</td><td>用遥操作采集数据，接入现场地图和流程，逐步调试工具并处理异常。</td><td>把“实验室会做”变成“客户现场重复做得成”。</td></tr>
+</tbody></table>
+<h3>三个场景，三类难度</h3>
+<table class="compare"><thead><tr><th>场景</th><th>录音中的任务</th><th>关键问题</th></tr></thead><tbody>
+<tr><td>商业空间</td><td>4S 店导览、展厅讲解和导航。</td><td>以移动和讲解为主，身体操作相对少；说话人称该类场景较成熟。</td></tr>
+<tr><td>工业现场</td><td>工厂及半导体相关合作场景。</td><td>流程常较固定，操作精度、节拍和稳定性是关键。</td></tr>
+<tr><td>家庭 / 服务</td><td>双足双手机器人坐电梯到一楼取快递再返回。</td><td>任务跨空间、跨楼层，环境和物品不固定，还涉及电梯、联网、身份信息和抓取失败恢复。</td></tr>
+</tbody></table>
+<div class="callout"><b>录音提到的控制频率（说话人举例，不是行业统一标准）：</b><p>任务规划约 1–2 Hz；上肢操作约 10–20 Hz；运控约 50–100 Hz；底层电机可到约 200 Hz。越靠近身体动作，通常越需要低延迟、高频率的专用控制。</p></div>
+<p><b>成熟度怎么判断：</b>分别问“单项工具是否能用”“整条任务是否端到端完成”“失败后能不能恢复”“换一个电梯/货架/物品还能不能做”。录音里的回答并不等同于商业化验收数据。</p>
+</section>
+<section id="snapshot" class="section">
+<div class="kicker">录音快照 / 录制日期未知</div><h2>说话人当时描述的项目进度</h2>
+<p>这段是内部业务介绍，不是 2026 年行业公告。录音日期没有提供，下面保留原说法的相对时间，不把它们当作当前状态。</p>
+<table class="compare"><thead><tr><th>环节</th><th>录音自述</th></tr></thead><tbody>
+<tr><td>单项工具</td><td>导航、靠近面板、按钮流程、等待观察、楼层地图切换等工具大多已分别打通；个别工具还需要速度和适配优化。</td></tr>
+<tr><td>取物能力</td><td>取快递/抓取工具当时还没完成，是端到端任务的缺口之一。</td></tr>
+<tr><td>长任务串联</td><td>各步骤单独能运行，不代表整条任务已完成。电梯门可能约 3 秒就关，若感知、工具或 Agent 响应过慢，机器人会错过动作窗口。</td></tr>
+<tr><td>异常与联网</td><td>调试电梯里加了 AP（无线接入点，提供/延伸 Wi‑Fi 覆盖），但机器人在不同网络间切换不够顺；AP 不等于电梯自带互联网。后续要考虑现场无网、动作失败后的重规划，以及云端模型不可用时本体侧如何兜底。</td></tr>
+<tr><td>当时目标</td><td>说话人提到“11 月 30 日”希望完成流程，并谈到“明年”在长沙园区推广的可能性。年份和目标是否后来实现，无法从这段录音确认。</td></tr>
+</tbody></table>
+<p><b>一句话理解当时阶段：</b>已经从零散动作走向工具化和小场景测试，正在攻克可靠的长流程串联；它不是录音所能证明的“已规模部署”。</p>
+</section>
+<section id="progress" class="section">
+<div class="kicker">05 / 行业拓展</div><h2>技术进展不等于已经规模商用</h2>
+<p>具身智能的进展可以分成四级：能在受控环境演示；能在限定任务中稳定运行；能在不同地点复制部署；能以合理成本大批量运营。新闻里的“发布”“合作”“试点”“量产计划”分别处在不同阶段，不宜合并成“已经普及”。</p>
+<div class="timeline">
+<article><time>2023–2024 · 研究热度上升</time><p>多模态大模型、视觉语言动作模型和机器人数据训练成为显著研究方向。行业开始更积极地把语言指令、视觉理解和动作策略连接起来。研究论文或视频演示不能单独证明现场可靠性。</p></article>
+<article><time>2025 · 中国展会与制造业试点受到关注</time><p>国务院新闻办公室英文网在 2025 年 5 月报道人形机器人进入中国工厂场景的进展，并指出汽车制造因数字化、标准化程度较高而成为早期应用场景之一。这是行业报道与案例线索，不代表全行业已经规模运营。</p></article>
+<article><time>2026-01-05 · Boston Dynamics 公布 Atlas 产品版计划</time><p>公司公告称，产品版 Atlas 开始制造，2026 年部署已全部安排，计划向 Hyundai 的 Robotics Metaplant Application Center（RMAC）和 Google DeepMind 发货；新增客户计划在 2027 年初加入。它显示从研发演示向指定机构部署推进，但公告中的“安排/计划”不能直接当成独立验证过的长期产线产能。</p></article>
+<article><time>2026-03-31 · 新华社报道智元机器人第 10,000 台下线</time><p>新华社报道，AGIBOT（智元机器人）宣布第 10,000 台量产人形机器人下线，并称从 5,000 台到 10,000 台用时略多于三个月。这是制造端规模的信号；“下线”不等于同等数量已交付、被客户持续使用或产生对应收入，报道本身也没有给出这些运营指标。</p></article>
+</div>
+<div class="source"><b>一手来源：</b><a href="https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/" target="_blank" rel="noopener">Boston Dynamics 官方公告，2026-01-05</a>（产品版、制造与部署安排）。<br><a href="https://english.news.cn/20260331/b75c2f1adc0d4282acc6df5d5890776b/c.html" target="_blank" rel="noopener">新华社英文网，2026-03-31</a>（智元机器人制造数量里程碑）。<br><a href="https://english.scio.gov.cn/chinavoices/2025-05/16/content_117879010.html" target="_blank" rel="noopener">国务院新闻办公室英文网，2025-05-16</a>（中国制造业场景与应用背景）。</div>
+<p>这些报道反映的是不同证据层级：企业公布的部署安排、媒体报道的制造数量、行业报道的应用趋势。它们都值得关注，但不能互相替代。要判断商业化程度，还需要客户侧确认、现场任务范围、运行时长、人工介入率、稳定性和营收数据。</p>
+<h3>目前最核心的工程难题</h3>
+<ul><li>数据：真实机器人数据昂贵，示教动作是否覆盖不同环境也很关键。</li><li>泛化：模型在熟悉物体上成功，不代表能应对新物体、新布局或遮挡。</li><li>可靠性与安全：机器人要识别失败、停下来或请求人工介入，而不是盲目继续。</li><li>经济性：购买、部署、维护和人工接管总成本，要低于或优于现有流程。</li><li>集成：电梯、门禁、工厂系统和客户流程常常需要工程改造及明确责任边界。</li></ul>
+<p class="small">建议看新闻时记录：公告日期、出资/签约双方、是展示/试点/采购/交付哪一种、部署地点和数量、是否有人监督、持续运行多久、任务成功率是否由第三方给出。</p>
+</section>
+<section id="limits" class="section">
+<div class="kicker">06 / 原文与边界</div><h2>自动识别稿与核对说明</h2>
+<p>以下文本是豆包 AUC 对原音分段后的自动识别稿，带说话人标记和相对音频时间戳，不代表经过人工逐字校对。为了避免伪造“原文”，完整识别稿单独提供：</p>
+<a class="button" href="介绍巨声公司相关业务架构_自动识别稿.txt" download>下载完整带时间戳识别稿</a>
+<p class="small">识别稿共 415 段，按音频时间顺序排列。建议先用摘要了解主线，再按时间戳回听需要核实的句子。附件名写作“巨声”，转写中出现“聚生/巨声/具深”等近音，无法仅凭 ASR 确认公司名；人名、产品名、数字和部分技术词也应回到原音复听。</p>
+</section>
+<footer>音频来源：用户提供的《介绍巨声公司相关业务架构.m4a》。摘要与教学解释是依据可辨主题的整理，不构成对该公司实际产品能力或经营数据的独立审计。</footer>
+</main></div>
+</body>
+</html>

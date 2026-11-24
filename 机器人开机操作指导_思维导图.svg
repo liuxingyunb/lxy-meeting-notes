@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1160" role="img" aria-labelledby="title desc">
+<title id="title">机器人开机与导航联调谈话思维导图</title>
+<desc id="desc">详细呈现开机运控、Agent联调与数据、导航定位与碰撞、跨楼层地图切换和对刘星宇的安排。</desc>
+<defs><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#203236}.title{font-size:25px;font-weight:700}.branch{font-size:19px;font-weight:700}.item{font-size:15px;font-weight:700}.detail{font-size:12px;fill:#596b6e}.tiny{font-size:11px;fill:#596b6e}.wire{fill:none;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+</style></defs>
+<rect width="1600" height="1160" fill="#f6f7f4"/>
+<text x="60" y="48" font-size="14" font-weight="700" fill="#2c716a">机器人开机操作指导 · 谈话思维导图</text>
+<text x="60" y="73" class="tiny">按录音顺序整理；按键映射需现场核实；导航撞柜发生过，根因未确认</text>
+
+<!-- main wires -->
+<path class="wire" stroke="#8bb8ae" d="M610 470 C520 400 480 305 415 255"/>
+<path class="wire" stroke="#a9bfd0" d="M990 470 C1080 400 1120 305 1185 255"/>
+<path class="wire" stroke="#d3a18f" d="M610 585 C520 655 480 755 415 810"/>
+<path class="wire" stroke="#a7bca6" d="M990 585 C1080 655 1120 755 1185 810"/>
+
+<!-- center -->
+<rect x="570" y="420" width="460" height="220" rx="8" fill="#e4efeb" stroke="#8bb8ae" stroke-width="2"/>
+<text x="800" y="468" text-anchor="middle" class="title">开机与导航联调</text>
+<text x="800" y="505" text-anchor="middle" font-size="15">从设备安全启动到 Agent 任务闭环</text>
+<text x="800" y="535" text-anchor="middle" font-size="14">开机 / 运控 → 定位 → 导航 → 状态反馈</text>
+<text x="800" y="575" text-anchor="middle" class="detail">先熟悉、先验证简单任务；异常可接管、可追踪</text>
+<text x="800" y="606" text-anchor="middle" class="tiny">操作记录根据豆包自动转录整理</text>
+
+<!-- upper left branch startup -->
+<rect x="60" y="115" width="480" height="70" rx="7" fill="#e4efeb" stroke="#8bb8ae" stroke-width="2"/>
+<text x="84" y="158" class="branch">一、开机与运控</text>
+<path d="M300 185 V210 H175 M300 210 H425 M300 300 V324 H175 M300 324 H425" fill="none" stroke="#8bb8ae" stroke-width="2"/>
+<rect x="60" y="210" width="230" height="68" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="76" y="237" class="item">关机后从头演示</text><text x="76" y="258" class="detail">工具材料向伟超等确认获取</text>
+<rect x="310" y="210" width="230" height="68" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="326" y="237" class="item">自检时腿部略离地</text><text x="326" y="258" class="detail">留出蹬动空间，扶稳机身</text>
+<rect x="60" y="324" width="230" height="68" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="76" y="351" class="item">运控前双脚落地</text><text x="76" y="372" class="detail">悬空启动可能乱蹬、找地</text>
+<rect x="310" y="324" width="230" height="68" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="326" y="351" class="item">机身轻抖作为线索</text><text x="326" y="372" class="detail">未确认启动前不要撤支撑</text>
+<rect x="90" y="408" width="420" height="58" rx="6" fill="#fff4ed" stroke="#e2c2b5"/>
+<text x="108" y="433" class="item">LT/RT 组合键与摇杆映射：转录不确定，需现场核实</text><text x="108" y="452" class="tiny">本文不作为独立按键操作依据</text>
+
+<!-- upper right navigation -->
+<rect x="1060" y="115" width="480" height="70" rx="7" fill="#e8eef3" stroke="#a9bfd0" stroke-width="2"/>
+<text x="1084" y="158" class="branch">二、导航与定位</text>
+<path d="M1300 185 V210 H1175 M1300 210 H1425 M1300 300 V324 H1175 M1300 324 H1425" fill="none" stroke="#a9bfd0" stroke-width="2"/>
+<rect x="1060" y="210" width="230" height="68" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1076" y="237" class="item">启动导航工作区服务</text><text x="1076" y="258" class="detail">脚本启动多个模块；界面提到 8000 端口</text>
+<rect x="1310" y="210" width="230" height="68" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1326" y="237" class="item">定位先关再开</text><text x="1326" y="258" class="detail">查看地图位置和实际位置是否一致</text>
+<rect x="1060" y="324" width="230" height="68" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1076" y="351" class="item">必要时手动重定位</text><text x="1076" y="372" class="detail">点实际位置，再拖实际朝向</text>
+<rect x="1310" y="324" width="230" height="68" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1326" y="351" class="item">发布点对点任务</text><text x="1326" y="372" class="detail">确认控制模式；测试去程与返回</text>
+<rect x="1090" y="408" width="420" height="58" rx="6" fill="#fff0e8" stroke="#e2c2b5"/>
+<text x="1108" y="433" class="item">导航模式没切换时，发布目标也可能不移动</text><text x="1108" y="452" class="tiny">服务状态、定位、模式逐项确认</text>
+
+<!-- lower left Agent -->
+<rect x="60" y="760" width="480" height="70" rx="7" fill="#f4e9e4" stroke="#d3a18f" stroke-width="2"/>
+<text x="84" y="803" class="branch">三、Agent 与数据工作</text>
+<path d="M300 830 V856 H175 M300 856 H425 M300 946 V970 H175 M300 970 H425" fill="none" stroke="#d3a18f" stroke-width="2"/>
+<rect x="60" y="856" width="230" height="68" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="76" y="883" class="item">从简单导航开始熟悉</text><text x="76" y="904" class="detail">先两点往返，再扩展任务链</text>
+<rect x="310" y="856" width="230" height="68" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="326" y="883" class="item">积累 tracker / 轨迹</text><text x="326" y="904" class="detail">分析模型与场景适配问题</text>
+<rect x="60" y="970" width="230" height="68" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="76" y="997" class="item">盘点工具与 Prompt</text><text x="76" y="1018" class="detail">删无用通用工具，补场景工具</text>
+<rect x="310" y="970" width="230" height="68" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="326" y="997" class="item">后续场景模型评测</text><text x="326" y="1018" class="detail">训练材料、基线、成功条件</text>
+
+<!-- lower right mapping and incident -->
+<rect x="1060" y="760" width="480" height="70" rx="7" fill="#e9efe8" stroke="#a7bca6" stroke-width="2"/>
+<text x="1084" y="803" class="branch">四、异常、切图与闭环</text>
+<path d="M1300 830 V856 H1175 M1300 856 H1425 M1300 946 V970 H1175 M1300 970 H1425" fill="none" stroke="#a7bca6" stroke-width="2"/>
+<rect x="1060" y="856" width="230" height="68" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1076" y="883" class="item">导航中发生撞柜</text><text x="1076" y="904" class="detail">根因未确认；按现场要求反馈</text>
+<rect x="1310" y="856" width="230" height="68" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1326" y="883" class="item">遥控器随手可接管</text><text x="1326" y="904" class="detail">走偏/接近障碍立即切手动</text>
+<rect x="1060" y="970" width="230" height="68" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1076" y="997" class="item">跨楼层地图切换</text><text x="1076" y="1018" class="detail">楼层轿厢/按键站点预先关联</text>
+<rect x="1310" y="970" width="230" height="68" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1326" y="997" class="item">Agent 已有流程但不稳定</text><text x="1326" y="1018" class="detail">走位偏、按键失败、长链路未全通</text>
+
+<!-- lower center relationship -->
+<rect x="575" y="760" width="450" height="280" rx="7" fill="#fff" stroke="#d8e0dc"/>
+<text x="605" y="800" class="item">跨楼层切图的对应关系</text>
+<text x="605" y="838" class="detail">三楼轿厢站点  ──关联──  二楼轿厢站点</text>
+<text x="605" y="870" class="detail">也可关联各楼层的电梯按键/对应位置</text>
+<text x="605" y="902" class="detail">到达关联站点后，再切换目标楼层地图</text>
+<text x="605" y="934" class="detail">切图后才有依据把机器人定位到新地图</text>
+<line x1="605" y1="955" x2="995" y2="955" stroke="#d8e0dc"/>
+<text x="605" y="984" class="item" fill="#8a4a37">安全提醒</text>
+<text x="605" y="1010" class="tiny">撞柜演示未查明原因；复测需监看、可接管、留日志。</text>
+
+<text x="60" y="1110" class="tiny">文件配套：机器人开机操作指导_谈话整理.html；原始识别稿可按时间戳回听。按键、接口、端口和专名均需以当前设备与内部文档核实。</text>
+</svg>

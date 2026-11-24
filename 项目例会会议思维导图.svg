@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">项目例会思维导图：从版本联调到场景验证</title>
+<desc id="desc">项目例会主要进展、风险和刘星宇的近期安排与建议。</desc>
+<defs><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1b3033}.head{font-size:24px;font-weight:700}.branch{font-size:20px;font-weight:700}.item{font-size:16px;font-weight:700}.detail{font-size:13px;fill:#586b6e}.tiny{font-size:12px;fill:#586b6e}.wire{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+</style></defs>
+<rect width="1600" height="1180" fill="#f6f7f3"/>
+<text x="60" y="52" font-size="14" font-weight="700" fill="#256c66">具身智能项目 · 例会思维导图</text>
+<text x="60" y="79" class="tiny">以豆包转录稿为依据；任务建议与会议决议已区分，专名和日期仍需核实</text>
+
+<!-- branch connectors -->
+<path class="wire" stroke="#8bb8ae" d="M610 490 C520 420 485 315 420 260"/>
+<path class="wire" stroke="#aabed0" d="M990 490 C1080 420 1115 315 1180 260"/>
+<path class="wire" stroke="#d3a18f" d="M610 590 C520 670 485 770 420 830"/>
+<path class="wire" stroke="#a7bca6" d="M990 590 C1080 670 1115 770 1180 830"/>
+
+<!-- center -->
+<rect x="575" y="440" width="450" height="200" rx="8" fill="#e4efeb" stroke="#8bb8ae" stroke-width="2"/>
+<text x="800" y="491" text-anchor="middle" class="head">项目例会</text>
+<text x="800" y="528" text-anchor="middle" font-size="16">能力研发进入真实本体联调</text>
+<text x="800" y="557" text-anchor="middle" font-size="15">平台 Agent + 感知 / 技能 / 导航</text>
+<text x="800" y="596" text-anchor="middle" class="detail">目标：把模块接成可观察、可验收的任务闭环</text>
+
+<!-- upper left -->
+<rect x="70" y="125" width="470" height="78" rx="7" fill="#e4efeb" stroke="#8bb8ae" stroke-width="2"/>
+<text x="95" y="174" class="branch">平台与场景联调</text>
+<path d="M305 203 V230 H175 M305 230 H435 M305 328 V352 H175 M305 352 H435" fill="none" stroke="#8bb8ae" stroke-width="2.5"/>
+<rect x="70" y="230" width="260" height="78" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="88" y="260" class="item">AIOS / Agent</text><text x="88" y="284" class="detail">十月底较完整版本；部署与验收待定</text>
+<rect x="330" y="230" width="210" height="78" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="348" y="260" class="item">工具与 Skill</text><text x="348" y="284" class="detail">盘点既有实现和归属</text>
+<rect x="70" y="352" width="260" height="78" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="88" y="382" class="item">动态感知</text><text x="88" y="406" class="detail">接口适配、环境联调</text>
+<rect x="330" y="352" width="210" height="78" rx="6" fill="#fff" stroke="#c7ddd8"/>
+<text x="348" y="382" class="item">快递场景</text><text x="348" y="406" class="detail">评审通过，目标十月底</text>
+
+<!-- upper right -->
+<rect x="1060" y="125" width="470" height="78" rx="7" fill="#e8eef3" stroke="#aabed0" stroke-width="2"/>
+<text x="1085" y="174" class="branch">机器人与算法进展</text>
+<path d="M1295 203 V230 H1165 M1295 230 H1425 M1295 328 V352 H1165 M1295 352 H1425" fill="none" stroke="#aabed0" stroke-width="2.5"/>
+<rect x="1060" y="230" width="260" height="78" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1078" y="260" class="item">导航定位</text><text x="1078" y="284" class="detail">修复已合入；旧本体资源仍紧</text>
+<rect x="1320" y="230" width="210" height="78" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1338" y="260" class="item">CPU / ROS</text><text x="1338" y="284" class="detail">消息阻塞可引发漂移</text>
+<rect x="1060" y="352" width="260" height="78" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1078" y="382" class="item">技能 / 遥操</text><text x="1078" y="406" class="detail">运控抖动、关节旋转待优化</text>
+<rect x="1320" y="352" width="210" height="78" rx="6" fill="#fff" stroke="#ccd9e3"/>
+<text x="1338" y="382" class="item">模型评测</text><text x="1338" y="406" class="detail">20 万样本，指标须校准</text>
+
+<!-- lower left -->
+<rect x="70" y="744" width="470" height="78" rx="7" fill="#f4e9e4" stroke="#d3a18f" stroke-width="2"/>
+<text x="95" y="793" class="branch">刘星宇：近期主线</text>
+<path d="M305 822 V850 H175 M305 850 H435 M305 960 V984 H175 M305 984 H435" fill="none" stroke="#d3a18f" stroke-width="2.5"/>
+<rect x="70" y="850" width="260" height="86" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="88" y="881" class="item">1. 接住版本联调</text><text x="88" y="906" class="detail">文生、艾鹏、感知团队对齐部署/接口</text>
+<rect x="330" y="850" width="210" height="86" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="348" y="881" class="item">2. 定义验收</text><text x="348" y="906" class="detail">闭环、延迟、失败恢复</text>
+<rect x="70" y="984" width="260" height="86" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="88" y="1015" class="item">3. 盘点分工与交接</text><text x="88" y="1040" class="detail">艾鹏 / 小广 / 负责人明确边界</text>
+<rect x="330" y="984" width="210" height="86" rx="6" fill="#fff" stroke="#ecd0c8"/>
+<text x="348" y="1015" class="item">4. 小步探索</text><text x="348" y="1040" class="detail">端侧自动化先做短验证</text>
+
+<!-- lower right -->
+<rect x="1060" y="744" width="470" height="78" rx="7" fill="#e8eee8" stroke="#a7bca6" stroke-width="2"/>
+<text x="1085" y="793" class="branch">依赖、决策与风险</text>
+<path d="M1295 822 V850 H1165 M1295 850 H1425 M1295 960 V984 H1165 M1295 984 H1425" fill="none" stroke="#a7bca6" stroke-width="2.5"/>
+<rect x="1060" y="850" width="260" height="86" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1078" y="881" class="item">本体排期</text><text x="1078" y="906" class="detail">朱博错峰安排导航/技能/Agent</text>
+<rect x="1320" y="850" width="210" height="86" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1338" y="881" class="item">采数需求</text><text x="1338" y="906" class="detail">格式、内容、设备、平台排期</text>
+<rect x="1060" y="984" width="260" height="86" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1078" y="1015" class="item">预算 / X3</text><text x="1078" y="1040" class="detail">按目标定数量和配置，核实交期</text>
+<rect x="1320" y="984" width="210" height="86" rx="6" fill="#fff" stroke="#d1ded3"/>
+<text x="1338" y="1015" class="item">产品 vs 预研</text><text x="1338" y="1040" class="detail">目标和验收分开管理</text>
+
+<rect x="565" y="760" width="470" height="248" rx="7" fill="#fff" stroke="#d9e1dc"/>
+<text x="595" y="800" class="item">与前次会议的关系</text>
+<text x="595" y="836" class="detail">前次：解释平台、Agent、大脑小脑、遥操和取件工具链。</text>
+<text x="595" y="866" class="detail">本次：开始接入真实本体，联调版本、动态感知和快递场景。</text>
+<text x="595" y="896" class="detail">核心转变：从“模块是什么”走到“如何联起来、测得准、跑得稳”。</text>
+<text x="595" y="946" class="detail">当前仍需确认：版本日期、职责边界、数据规格、设备配置、验收指标。</text>
+<text x="595" y="976" class="tiny">任务建议属于整理者建议，不代表会议已做决议。</text>
+
+<text x="60" y="1130" class="tiny">录音识别中的“新宇/星宇/心雨”按用户提供姓名统一为刘星宇；不完整的工时比例与技术缩写未作为正式安排。</text>
+</svg>

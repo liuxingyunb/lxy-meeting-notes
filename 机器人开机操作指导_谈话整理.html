@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>机器人开机与导航操作指导｜谈话整理</title>
+<style>
+:root{--ink:#203236;--muted:#5d6d70;--paper:#f6f7f4;--white:#fff;--line:#d8e0dc;--teal:#2c716a;--blue:#527793;--coral:#a75f4b;--green:#5a785f;--gold:#8d6d2f;--pale-teal:#e4efeb;--pale-blue:#e8eef3;--pale-coral:#f4e9e4;--pale-green:#e9efe8;--pale-gold:#f4eedf}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.78 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}.layout{display:grid;grid-template-columns:220px minmax(0,940px);gap:48px;max-width:1280px;padding:38px 32px;margin:auto}aside{position:sticky;top:24px;height:max-content;border-left:2px solid var(--line);padding-left:16px}aside strong{font-size:13px;color:var(--muted)}nav{display:grid;margin-top:10px}nav a{font-size:13px;text-decoration:none;color:var(--muted);padding:4px 0}nav a:hover{color:var(--teal)}main{min-width:0}header{padding:22px 0 28px;border-bottom:1px solid var(--line)}.eyebrow,.kicker{font-size:12px;font-weight:750;color:var(--teal)}h1{font-size:38px;line-height:1.22;margin:10px 0 12px}h2{font-size:25px;line-height:1.35;margin:0 0 12px}h3{font-size:18px;line-height:1.4;margin:0 0 8px}h4{font-size:15px;margin:15px 0 5px}p{margin:0 0 12px}.lead{font-size:17px;color:#405255;max-width:840px}.meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.tag{font-size:12px;border:1px solid var(--line);border-radius:3px;padding:2px 8px;color:var(--muted)}.notice{margin-top:18px;padding:13px 16px;background:var(--pale-gold);border-left:3px solid #b89448;font-size:13px}.section{padding:34px 0;border-bottom:1px solid var(--line);scroll-margin-top:22px}.kicker{color:var(--coral);margin-bottom:5px}.callout{padding:14px 17px;margin:16px 0;background:var(--pale-teal);border-left:3px solid #70a49b}.callout.warning{background:var(--pale-coral);border-color:#ba755e}.callout p:last-child{margin-bottom:0}.timeline{border-left:2px solid var(--line);margin:20px 0;padding-left:20px}.block{position:relative;padding:0 0 20px}.block:before{content:"";position:absolute;left:-26px;top:10px;width:10px;height:10px;border-radius:50%;background:var(--teal)}.block:nth-child(3n+2):before{background:var(--blue)}.block:nth-child(3n):before{background:var(--coral)}.time{font-size:12px;font-weight:750;color:var(--teal);margin-bottom:4px}.block p{font-size:14px;color:#435457}.quote{padding:12px 15px;margin:9px 0;background:#fff;border:1px solid var(--line);font-size:14px}.quote b{color:var(--ink)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:17px 0}.steps article{padding:13px 14px;background:#fff;border-top:3px solid var(--teal)}.steps article:nth-child(2){border-color:var(--blue)}.steps article:nth-child(3){border-color:var(--coral)}.steps h3{font-size:15px}.steps p{font-size:13px;color:var(--muted);margin:0}.table-wrap{overflow-x:auto}.table{width:100%;border-collapse:collapse;font-size:13px;margin:15px 0}.table th,.table td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.table th{font-size:11px;color:var(--muted)}.table td:first-child{font-weight:700;min-width:130px}.tagline{display:inline-block;font-size:11px;padding:1px 6px;border-radius:2px;background:var(--pale-blue);color:#3d6179}.tagline.caution{background:var(--pale-coral);color:#884b38}.tagline.suggest{background:var(--pale-green);color:#47664d}.small{font-size:12px;color:var(--muted)}.button{display:inline-block;padding:7px 10px;border:1px solid #86aaa4;color:var(--teal);font-size:13px;text-decoration:none;margin:5px 7px 5px 0}ul,ol{padding-left:22px}li{margin:5px 0}.transcript-ref{font:12px/1.8 ui-monospace,SFMono-Regular,Menlo,monospace;color:#536368;background:#fff;padding:12px;border:1px solid var(--line)}footer{padding:22px 0;color:var(--muted);font-size:12px}@media(max-width:850px){.layout{display:block;padding:20px 18px}aside{position:static;border:0;border-bottom:1px solid var(--line);padding:0 0 10px;margin-bottom:16px}nav{display:flex;gap:13px;overflow-x:auto;white-space:nowrap}nav a{flex:none}h1{font-size:32px}.steps{grid-template-columns:1fr 1fr}}@media(max-width:500px){.layout{padding:15px}.section{padding:27px 0}h1{font-size:28px}.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="layout">
+<aside><strong>谈话整理</strong><nav><a href="#overview">先看概览</a><a href="#chronology">按时间详述</a><a href="#procedure">操作顺序</a><a href="#issues">异常与风险</a><a href="#you">对你的安排</a><a href="#uncertain">待核实细节</a><a href="#source">原始转录</a></nav></aside>
+<main>
+<header><div class="eyebrow">机器人开机操作指导 · 豆包录音文件识别 2.0</div><h1>开机、运控与导航联调谈话整理</h1><p class="lead">这份材料按录音时间顺序优化整理，尽量保留讲解者的操作步骤、原因说明、现场问答、导航演示和后续工作安排。口头重复已收拢；设备名、按键和缩写仍以自动识别稿为准，听辨不稳处会标出，不将它们当作已核实的正式 SOP。</p><div class="meta"><span class="tag">音频时长 26 分 20 秒</span><span class="tag">整理日期 2026-10-23</span><span class="tag">保留说话人编号与时间定位</span><span class="tag">完整识别稿可下载</span></div><div class="notice"><b>安全说明：</b>录音中的开机步骤是在现场设备和人员看护下演示的。首次操作、维护后操作或步骤不确定时，应由熟悉该型号的负责人现场确认；机器人启动和导航时应保证周围无人处于危险区域，并准备好遥控接管。本文不是设备厂商的正式操作规程。</div></header>
+
+<section id="overview" class="section"><div class="kicker">01 / 先看概览</div><h2>这次谈话覆盖了什么</h2><div class="steps">
+<article><h3>机器人启动</h3><p>关机后从头演示开机、自检、腿部支撑、脚部落地、手柄连接与运控开启，并以机身轻微抖动作为启动确认线索。</p></article>
+<article><h3>导航操作</h3><p>进入导航工作区启动导航服务和可视化界面，检查定位，必要时手动重定位，再测试已建站点间的点对点导航。</p></article>
+<article><h3>Agent 联调</h3><p>希望你先熟悉并跑通简单导航，过程中积累 tracker/轨迹等记录，检查现有工具和 prompt，并将实际问题反馈给模型或导航团队。</p></article>
+</div><div class="callout warning"><b>演示中发生了实际碰撞。</b><p>约 17:10，机器人导航时撞到柜子。现场一度认为定位没有偏移，并怀疑障碍物未被识别；讲解者要求在导航相关群里反馈。即使定位看起来正确，也不能据此判断避障安全。遥控器应随时可用，测试过程要有人监看并能立即接管。</p></div><p><a class="button" href="机器人开机操作指导_思维导图.svg" target="_blank" rel="noopener">打开思维导图</a><a class="button" href="机器人开机操作指导_豆包转录稿.txt" download>下载豆包完整转录稿</a></p></section>
+
+<section id="chronology" class="section"><div class="kicker">02 / 按时间详述</div><h2>谈话内容优化整理稿</h2><p class="small">以下按录音发生顺序整理，不是逐字稿。重要细节和问答均保留；原始自动识别稿可在页面末尾下载，用于回听核对。</p><div class="timeline">
+<article class="block"><div class="time">00:00–01:58 · 可视化工具与演示准备</div><p>谈话开始时，操作人员说明此前是听别人讲过后，自己把相关内容部署并启动了。随后有人介绍“边缘计算”的可视化工具。讲解者补充，这套内容不只是可视化界面，也涉及如何通过接口调用功能；如果需要完整说明或材料，可以找伟超获取。</p><p>接下来准备从头演示。讲解者说先关机，再重新走完整流程。旁边询问调试是否需要推车固定，讲解者表示这次机器人使用自身运控，认为调试时相对稳定，不会突然摔倒；转写中关于具体支撑物、连接位置的几句话不够清楚，因此不补猜硬件名称。</p></article>
+
+<article class="block"><div class="time">02:01–03:54 · 开机、自检与落脚顺序</div><p>讲解者从涉及运控的开机流程开始说明：开机前先稍微抬起机器人，让腿部离地一些。原因是刚开机自检时，腿会有一个蹬动动作；现场试着按住支撑位置并向上抬高，讲解者表示稍微给一点支撑力即可，若自检时腿仍蹬地，就再抬高一点。</p><p>开机自检期间机器人会蹬一下。此时运控能力尚未开启，所以不能把机器人直接放开，否则可能会倒。待开机后，要把机器人放到地面，让脚着地，再开启自身运控。讲解者特别说明：若机器人还在半空就启动运控，它会认为自己没有触地、尝试够地，可能出现乱蹬。</p><div class="quote"><b>操作逻辑：</b>开机自检时扶稳并留出腿部动作空间；等待启动阶段完成后，让脚可靠着地；确认环境安全后再开启运控。具体支撑方法与安全距离应遵循设备负责人现场指导。</div></article>
+
+<article class="block"><div class="time">03:55–04:36 · 手柄连接、运控确认与等待自启</div><p>转录中讲解者说，先按手柄上的 LT+RT 建立手柄与机器人的连接；随后按 LT+“返回”键开启运控。运控开启时，机身会轻微抖一下，可作为已启动的可见迹象。演示时机器人仍处于自启过程，现场人员提醒要等一会儿；之后确认相关组件已经装好。</p><p><span class="tagline caution">按键需现场核实</span> “LT+RT”“LT+返回”的组合来自自动识别稿；“返回”对应哪个实体键、当前固件是否一致，录音没有展示清楚。不能仅凭文字照做。</p></article>
+
+<article class="block"><div class="time">04:36–06:42 · 先从简单导航做起，并在调试中留数据</div><p>大家讨论先拿简单任务试用，不做复杂场景。尽管当时导航可能还不稳定，讲解者认为可以先从两个点之间的简单导航开始。你的近期目标之一，是熟悉设备并把业务调通；导航被认为是当前相对更成熟、适合先上手的部分，按钮操作当时还不能可靠使用。</p><p>会议提出，联调过程中要积累 tracker（转录中也出现“trapper”等近音）或轨迹记录。负责人会提供内网部署的模型/服务，名称被识别为“Swift 4.1”，并提到“flash 应该够用”；专名需要核实。后续可查看运行轨迹和数据流，分析模型表现，再将问题反馈给模型侧。若未来为该场景专门训练规划模型，可用真实业务轨迹构造训练材料或评测集，检验模型是否适配实际场景。</p><p>讨论还提到：如果现有模型不微调也能跑通，初期可先用现成能力；但考虑长期商业化和成本，未来可能需要自有模型或更低成本方案，因此训练数据要与真实业务匹配。录音称该场景相对不复杂，但任务链仍然较长。</p></article>
+
+<article class="block"><div class="time">06:42–10:16 · 盘点现有工具、AI OS 与已实现能力</div><p>讲解者查看艾鹏此前的日志和工具页面，认为要先盘点已有工具是否足够：留下场景真正需要的工具，删去无用的通用工具，有需要再补充。艾鹏此前的 prompt 可以先参考复用，之后再共同讨论。现场也指出，有些工具是项目特有的，平台或其他同事未必已经提供。</p><p>对 AI OS 的理解，谈话中有人表示它并非专为当前场景定制，而是提供较通用的 Agent 能力，可能允许定义 Agent Loop 等功能；底层实现与当前团队之间隔着平台层，具体内部机制并不完全清楚。整理时因此只保留“平台提供通用能力、项目侧补场景工具”的意思，不对产品内部架构作确定判断。</p><p>已有能力方面，现场人员称：机器人可以按命令走到指定点，也能调用按键动作；但当前机械手还没调好，实际按钮任务可能受限。进出电梯、按完按钮后等待再出来等流程能力已有基础实现，但整条链路不保证每次成功。导航、工具本身能执行，不等于脚走位、按键和长流程都可靠。</p><p>谈话形成的调试思路是：先把流程跑起来，观察真实问题，再谈提升。只有在实际联调中知道问题在哪，才能决定应优化模型、工具、硬件还是现场流程。你此前做过模型和评测，可在过程中帮助分析数据和评测材料。</p></article>
+
+<article class="block"><div class="time">10:16–12:15 · 再确认开机信号并讲解遥控</div><p>讲解者指出，按下那两个手柄键后要观察机身是否抖动；抖动意味着运控/重启流程确实生效。如果没有抖动，不能认为已经启动成功，也不能贸然撤掉支撑。现场确认机器人启动后，才说明可以撤除支撑架；在不熟悉的前几次操作中，可以先停下来核实。</p><p>之后切换到遥控器控制模式进行演示。讲解者说摇杆可控制转向和移动，按住 LT 时摇杆有不同移动作用；转录的细节存在互相补充甚至可能矛盾的说法：有的句子说左右转、前后原地踏步，按 LT 才能前后走；之后又说按住时左右移、放开时旋转。摇杆速度似乎随拨动幅度变化，拨得轻就慢、拨得多就快。因动作映射存在识别和语境歧义，完整键位必须现场确认，不按转录稿独自试操作。</p></article>
+
+<article class="block"><div class="time">12:15–15:36 · 启动导航界面、定位检查与手动重定位</div><p>操作人员登录导航工作区。讲解者在 Workspace 的 navigation 区域中找到导航资源，启动导航服务；转录称一个脚本会一次性启动原本需要分别启动的多个进程（提到六个），之后可以打开可视化界面，提及 8000 端口。工作区名称、资源名和启动方式均应以当前团队文档为准。</p><p>打开界面后，讲解者建议先关闭定位再重新开启，因为定位可能已经处于开启状态，直接重复开启会报错；同时机器人开机后也可能定位漂移。示例中曾出现机器人实际在一处、地图蓝点却跑到另一个入口附近的情况。</p><p>如果关闭并重开后定位仍不正确，就执行手动重定位：在地图上点选机器人实际所在的大致位置，再把方向拖到机器人实际朝向。讲解者强调，方向也要设对，重定位的目的是把蓝色机器人位置从错误点拉回真实位置。定位确认后，才测试已经预先打好的站点。</p></article>
+
+<article class="block"><div class="time">15:36–18:17 · 点对点导航、模式切换与碰撞事故</div><p>现场选择已建站点，例如导航到 313 会议室，点击“发布”后机器人开始执行。演示中机器人没有立刻移动，讲解者检查后发现它还处于遥控/控制模式，于是切换控制模式，再观察是否按设定路线移动；随后又让它返回测试起点，以演示点对点导航。</p><p>有人询问机器人是否会撞墙。讲解者说导航此前发生过碰撞，因此如果机器人走向不对，要立即切到遥控控制模式，使它不再受导航指令控制，遥控器必须放在手边。紧接着演示中机器人实际撞到柜子。现场人员惊讶并询问原因；讲解者当时觉得定位没有偏移，另一位猜测机器人没有识别到柜子，于是有人要求在导航群里反馈，并确认需要把新操作人员拉进导航适配群。</p><div class="callout warning"><b>这次事故是谈话中的关键事实，不要弱化为一般风险。</b><p>测试过程中确实发生撞柜，碰撞原因当场没有查清。可能涉及避障感知、地图/定位、路径规划、控制切换等因素，不能仅凭现场猜测定因。后续复测前应由导航负责人确认安全措施；复现时记录时间、位置、地图、目标站点、导航状态、遥控模式、日志和视频。</p></div><p>现场人员认为之前测试时表现正常，但这次又复现了异常。讲解者表示导航已有适配内容，后续可通过接口调用；碰撞案例需反馈团队继续排查。</p></article>
+
+<article class="block"><div class="time">18:21–20:30 · 导航接口、实时打点和已有集成</div><p>操作人员询问导航是否提供接口、打点之后能否得到结果。讲解者表示定位、站点编辑、点对点导航等都有接口；其中部分接口艾鹏可能已经集成到 Agent，其他能力可按需求自行接入。Agent 可能需要实时打点，例如用户告知当前位置名称后，将当前位置记录为站点。</p><p>建图不一定是每次调试都做：录音中的工作方式是先准备好地图，再使用定位、添加站点和导航能力。现场检查若干服务时发现有组件似乎没有启动；讲解者推测艾鹏之前可能手动添加过站点，因此主要集成了点对点导航和地图切换。讲解者说这些是当前使用较多的功能，后续遇到问题可以继续问。</p></article>
+
+<article class="block"><div class="time">20:31–23:44 · 电梯跨楼层切图与站点关联</div><p>讲解者提示地图切换有一个容易踩坑的地方：机器人在三楼电梯轿厢中坐到二楼后，不能只假设它自动知道自己在二楼地图上的坐标。若直接切换地图，它可能无法确定新地图中的位置。</p><p>解决方法是预先在每层地图中建立对应位置的站点，并把它们关联起来。例如三楼和二楼电梯轿厢内相同位置都建成“电梯轿厢”站点，再建立关联；也可以关联不同楼层的电梯按键位置。机器人到达目标楼层后，处于已关联的对应位置，再切换地图，系统才可以把它定位到新楼层的相应位置。</p><p>录音举例提到三楼电梯轿厢与一楼、二楼、四楼电梯轿厢之间的关联。操作流程上，机器人先到对应电梯按键/站点位置，在电梯到达后保持站位，再切换到目标楼层地图。讲解者解释，如果重启后定位本来就可能飘，换地图后更不能想当然地认为机器人知道自己在哪；关联站点用于给跨地图定位提供对应关系。</p></article>
+
+<article class="block"><div class="time">23:46–26:08 · 既有 Agent 流程、资料获取与可视化用途</div><p>操作人员询问艾鹏之前做到哪一步。讲解者称此前已将主要流程串联起来：收到“去二楼”之类的任务后，机器人先导航到电梯外按键位置，调用按键技能；随后导航到电梯内按键位置，再调用按键技能。讲解者也明确说整条流程并未完全稳定跑通，可能出现走位偏、按不到按钮等情况；相关功能已经实现，但可靠性还有缺口。</p><p>关于后续资料，讲解者建议找伟超获取可视化工具使用说明；转录中的人名有近音混淆，建议在团队通讯录中确认具体联系人。可视化工具并非 Agent 调用的唯一方式，但仍然有价值：Agent 发命令时，可以同时观察界面中的位置和导航状态；若启动后定位漂移，界面能看出来并及时重定位。接口日志具体属于导航系统还是机器人系统，现场回答不完全确定，但讲解者倾向于认为是导航系统的位置相关日志。</p><p>谈话最后确认，下一步是把导航与 Agent 功能结合起来做串联调试；你可以在联调中熟悉工作区、导航接口和可视化工具，并将问题与轨迹数据反馈给相关负责人。</p></article>
+</div></section>
+
+<section id="procedure" class="section"><div class="kicker">03 / 从谈话提取的流程</div><h2>便于现场复盘的操作顺序</h2><p>以下是对讲解内容的流程化整理。涉及支撑方式、实体按键、运动模式切换时，以设备负责人和正式文档为准。</p><div class="table-wrap"><table class="table"><thead><tr><th>阶段</th><th>谈话中的操作</th><th>观察/判断</th><th>若不符合预期</th></tr></thead><tbody>
+<tr><td>开机前</td><td>讲解者关机后准备从头演示；开机自检时扶持机身，让腿部略离地，给足蹬动空间。</td><td>自检期间腿会有蹬动动作。</td><td>确保支撑稳固；不让腿部蹬到周围物体。</td></tr>
+<tr><td>启动等待</td><td>等待自检/自启完成；此时运控尚未开启，不能松手任由机器人站立。</td><td>不能仅凭系统已上电就认定可放开。</td><td>继续扶稳并确认状态；不确定时暂停。</td></tr>
+<tr><td>落脚</td><td>启动运控前把机器人放到地面，使脚部着地。</td><td>讲解者称悬空启运控可能导致乱蹬、找地。</td><td>先确认双脚接触情况与站立支撑。</td></tr>
+<tr><td>手柄/运控</td><td>转录提到 LT+RT 连接手柄、LT+返回开启运控。</td><td>机身轻微抖动被用作运控启动线索。</td><td>无抖动或状态不明时不要撤支撑；按现场 SOP 核实。</td></tr>
+<tr><td>导航服务</td><td>从导航工作区启动脚本/服务，打开可视化界面（录音提到 8000 端口）。</td><td>查看定位点与实际位置是否一致。</td><td>组件未启动时先检查服务状态，不直接发布导航。</td></tr>
+<tr><td>定位</td><td>先关闭再重开定位；必要时按实际位置和朝向手动重定位。</td><td>地图蓝点应大致对应机器人实际位置与朝向。</td><td>定位漂移未排除前，不开始无人看护的自主导航。</td></tr>
+<tr><td>点对点导航</td><td>选择已建站点，发布目标；确认当前为导航控制模式；测试往返。</td><td>观察路径、定位、障碍物识别和机器人状态。</td><td>遥控器在手边；走偏/接近障碍时立即接管并记录。</td></tr>
+<tr><td>跨层切图</td><td>先建立并关联各楼层轿厢/按键对应站点；到达关联位置后再切换目标楼层地图。</td><td>切图后机器人应落在目标地图相应站点附近。</td><td>站点关系或定位不明确时不要继续下一个自主步骤。</td></tr>
+</tbody></table></div></section>
+
+<section id="issues" class="section"><div class="kicker">04 / 问题、约束与应对</div><h2>谈话中的异常和已知缺口</h2><ul>
+<li><b>开机定位可能漂移：</b>重新开定位不一定自动正确，需要人工重定位。</li>
+<li><b>碰撞已在现场发生：</b>机器人在导航中撞柜，原因未定。不能假设高柜一定能被识别。</li>
+<li><b>导航和控制模式可能不匹配：</b>发布目标后机器人没动，现场发现仍处于遥控控制模式；需要检查模式状态。</li>
+<li><b>电梯切图依赖站点关联：</b>地图切换会改变坐标语境，缺少楼层间对应关系时，机器人不一定知道在新地图的哪里。</li>
+<li><b>机械手/按钮技能未完成：</b>录音称当前手还没调完，虽有按键能力流程，仍会因脚步偏差或按不到而失败。</li>
+<li><b>端到端流程未完全打通：</b>进电梯、按键、等待和出来的功能有实现，但整体稳定性未确认。</li>
+<li><b>数据和评测尚待建设：</b>需要把真实场景运行过程和任务表现沉淀下来，才能针对场景评估或训练模型。</li>
+</ul><div class="callout"><b>建议形成每次测试的记录：</b><p>日期/操作者、机器人型号与软件版本、地图及起终点、定位是否重置、控制模式、任务步骤、tracker/轨迹、异常时间点、视频/日志、是否发生接管或碰撞、问题初步归类和责任团队。这里是整理建议，不是录音里的正式决议。</p></div></section>
+
+<section id="you" class="section"><div class="kicker">05 / 对你的安排</div><h2>你接下来需要熟悉和推进的事</h2><div class="table-wrap"><table class="table"><thead><tr><th>顺序</th><th>谈话安排</th><th>建议形成的可检查结果</th></tr></thead><tbody>
+<tr><td>先熟悉设备</td><td>先跟着负责人练习启动、切换运控和简单导航，熟悉调试界面与流程。</td><td>经现场负责人确认的开机/停机检查单；明确手柄按键、状态确认信号和紧急接管方法。</td></tr>
+<tr><td>先跑简单任务</td><td>从点对点导航开始，不急着做复杂的电梯/按键长任务。</td><td>完成若干次受控往返，记录成功、偏航、切换模式和定位修正情况。</td></tr>
+<tr><td>看数据与轨迹</td><td>调试期间积累 tracker/轨迹；后续用内网模型或相关服务分析任务表现。</td><td>一份可复现的问题样例、轨迹/日志、当前模型或工具的失败点。</td></tr>
+<tr><td>盘点 Agent 工具</td><td>参考艾鹏现有 prompt 和工具，删掉场景无关的通用项，补齐本场景必需工具。</td><td>工具清单：导航、定位、打点/站点编辑、地图切换、按键技能、状态观察；逐项注明接口和可用性。</td></tr>
+<tr><td>跟团队联调</td><td>把导航与 Agent 串联；遇到设备/导航问题时联系相应负责人，并拿到可视化工具说明。</td><td>一条最小闭环流程和问题台账，区分模型、导航、技能、机械手、地图配置等原因。</td></tr>
+<tr><td>为后续模型评测做准备</td><td>若后续要为场景做专门规划模型，真实任务数据可用于构造材料和评测集。</td><td>先建立场景任务集、成功条件、失败分类和基线，不要只凭单次演示评价模型。</td></tr>
+</tbody></table></div><p class="small">录音还提到希望以新的 AIOS 版本做业务调通，时间约在“下周中/周三左右”，但具体版本名称和日期来自自动识别，且会议日期未能从音频确认，应再向负责人核对。</p></section>
+
+<section id="uncertain" class="section"><div class="kicker">06 / 需要回听或现场确认</div><h2>不要把识别疑点当成确定指令</h2><ul>
+<li><b>实体按键：</b>LT+RT、LT+“返回”是否确为当前机器人手柄对应组合，录音画面和自动稿都不足以独立确认。</li>
+<li><b>摇杆映射：</b>转录对按住/放开 LT 时前进、横移和转向的描述不完全一致，必须由设备负责人当面演示。</li>
+<li><b>启动对象：</b>出现“空调锁”等明显错听，疑似机器人自检/本体锁相关词，不据此命名具体组件。</li>
+<li><b>工具、平台、模型名：</b>“Swift 4.1”“AIOS”“tracker”等有识别不确定性，应检查原始日志、代码或团队文档。</li>
+<li><b>导航界面和端口：</b>录音说到 Workspace/navigation 和 8000 端口；环境可能变化，实际服务入口以当前部署文档为准。</li>
+<li><b>事故原因：</b>现场猜测是柜子未识别，但没有完成根因分析，不能直接写成已确认的感知缺陷。</li>
+</ul></section>
+
+<section id="source" class="section"><div class="kicker">07 / 来源与完整原文</div><h2>豆包自动转录稿</h2><p>本页是对原谈话的详细优化整理：保留顺序和细节、减少口头重复、把问答合并到对应主题。完整 26 分 20 秒的逐段识别稿仍保留说话人编号与时间戳，可逐段回听核对。</p><a class="button" href="机器人开机操作指导_豆包转录稿.txt" download>下载完整豆包转录稿</a><p class="small">自动识别可能错听姓名、按键和技术词；操作指导涉及真实机器人时，按正式设备文档及负责人现场确认执行。</p></section>
+<footer>来源：用户提供的《机器人开机操作指导.m4a》。本页面不替代厂商安全手册或团队正式 SOP；尤其是手柄按键映射、机器人支撑和事故复测流程需现场核验。</footer>
+</main></div></body></html>
